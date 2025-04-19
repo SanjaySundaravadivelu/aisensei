@@ -26,7 +26,9 @@ import { chatSession } from "@/scripts";
 import {
   addDoc,
   collection,
+  deleteDoc,
   doc,
+  getDoc,
   serverTimestamp,
   updateDoc,
 } from "firebase/firestore";
@@ -60,6 +62,34 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { userId } = useAuth();
+
+  const subOne = async () => {
+    console.log("clicked", userId);
+    if (!userId) return console.error("❌ No user ID provided");
+
+    const userRef = doc(db, "users", userId);
+    const userSnap = await getDoc(userRef);
+
+    if (!userSnap.exists()) {
+      console.error("❌ User not found");
+      return;
+    }
+
+    const userData = userSnap.data();
+    const currentRequests = userData?.requests ?? 0;
+
+    if (currentRequests <= 0) {
+      console.warn("⚠️ No requests remaining");
+      return;
+    }
+
+    await updateDoc(userRef, {
+      requests: currentRequests - 3,
+      updateAt: new Date(), // You can use serverTimestamp() if you prefer
+    });
+
+    console.log("✅ User request count updated:", currentRequests - 3);
+  };
 
   const title = initialData
     ? initialData.position
@@ -121,6 +151,7 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
   const onSubmit = async (data: FormData) => {
     try {
       setLoading(true);
+      subOne();
 
       if (initialData) {
         // update
@@ -160,7 +191,28 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
       setLoading(false);
     }
   };
+  const onDelete = async () => {
+    try {
+      setLoading(true);
 
+      if (!initialData?.id) {
+        throw new Error("Document ID is missing");
+      }
+
+      const docRef = doc(db, "interviews", initialData.id); // now definitely a string
+      await deleteDoc(docRef);
+
+      toast.success("Interview deleted successfully.");
+      navigate("/generate", { replace: true });
+    } catch (error) {
+      console.log(error);
+      toast.error("Error..", {
+        description: `Something went wrong. Please try again later`,
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
   useEffect(() => {
     if (initialData) {
       form.reset({
@@ -183,7 +235,13 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
         <Headings title={title} isSubHeading />
 
         {initialData && (
-          <Button size={"icon"} variant={"ghost"}>
+          <Button
+            size={"icon"}
+            variant={"ghost"}
+            onClick={() => {
+              onDelete();
+            }}
+          >
             <Trash2 className="min-w-4 min-h-4 text-red-500" />
           </Button>
         )}

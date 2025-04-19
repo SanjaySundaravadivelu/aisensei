@@ -7,6 +7,8 @@ export interface User {
   imageUrl: string;
   createdAt: Timestamp | FieldValue;
   updateAt: Timestamp | FieldValue;
+  subrcription: string;
+  requests: number;
 }
 
 export interface Interview {

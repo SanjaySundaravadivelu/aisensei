@@ -29,6 +29,8 @@ const AuthHanlder = () => {
               imageUrl: user.imageUrl,
               createdAt: serverTimestamp(),
               updateAt: serverTimestamp(),
+              subrcription: "Free",
+              requests: 100,
             };
 
             await setDoc(doc(db, "users", user.id), userData);

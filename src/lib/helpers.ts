@@ -4,15 +4,15 @@ export const MainRoutes = [
     href: "/",
   },
   {
-    label: "Contact Us",
-    href: "/contact",
+    label: "Job Insights",
+    href: "/jobs",
   },
   {
-    label: "About Us",
-    href: "/about",
+    label: "Resume Builder",
+    href: "/resume",
   },
   {
-    label: "Services",
-    href: "/services",
+    label: "Take an interview",
+    href: "/generate",
   },
 ];

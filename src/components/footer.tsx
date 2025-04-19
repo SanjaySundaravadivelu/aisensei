@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"; // Import Lucide icons
+import { Mail, Twitter, Instagram, Linkedin, Github } from "lucide-react"; // Import Lucide icons
 import { Link } from "react-router-dom";
 import { Container } from "@/components/container";
 import { MainRoutes } from "@/lib/helpers";
@@ -44,12 +44,14 @@ const FooterLink: React.FC<FooterLinkProps> = ({ to, children }) => {
 
 export const Footer = () => {
   return (
-    <div className="w-full bg-black text-gray-300 hover:text-gray-100 py-8">
+    <div className="w-full bg-gradient-to-l from-zinc-800 to-indigo-900 text-gray-300 hover:text-gray-100 py-8">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* First Column: Links */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-bold text-slate-100  text-lg mb-4">
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               {MainRoutes.map((route) => (
                 <FooterLink key={route.href} to={route.href}>
@@ -61,7 +63,7 @@ export const Footer = () => {
 
           {/* Second Column: About Us */}
           <div>
-            <h3 className="font-bold text-lg mb-4">About Us</h3>
+            <h3 className="font-bold text-slate-100 text-lg mb-4">About Us</h3>
             <p>
               We are committed to helping you unlock your full potential with
               AI-powered tools. Our platform offers a wide range of resources to
@@ -71,42 +73,34 @@ export const Footer = () => {
 
           {/* Third Column: Services */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Services</h3>
+            <h3 className="font-bold text-slate-100 text-lg mb-4">Services</h3>
             <ul>
-              <FooterLink to="/services/interview-prep">
-                Interview Preparation
-              </FooterLink>
-              <FooterLink to="/services/career-coaching">
-                Career Coaching
-              </FooterLink>
-              <FooterLink to="/services/resume-building">
-                Resume Building
-              </FooterLink>
+              <FooterLink to="/generate">Interview Preparation</FooterLink>
+              <FooterLink to="/jobs">Job Insights</FooterLink>
+              <FooterLink to="/resume">Resume Building</FooterLink>
             </ul>
           </div>
 
           {/* Fourth Column: Address and Social Media */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Contact Us</h3>
-            <p className="mb-4">123 AI Street, Tech City, 12345</p>
+            <h3 className="font-bold text-slate-100 text-lg mb-4">
+              Contact Us
+            </h3>
+            <p className="mb-4">Sanjay S</p>
             <div className="flex gap-4">
               <SocialLink
-                href="https://facebook.com"
-                icon={<Facebook size={24} />}
+                href="https://github.com/SanjaySundaravadivelu"
+                icon={<Github size={24} />}
                 hoverColor="text-blue-500"
               />
               <SocialLink
-                href="https://twitter.com"
-                icon={<Twitter size={24} />}
+                href="mailto:s.sanjaysundaram@gmail.com"
+                icon={<Mail size={24} />}
                 hoverColor="text-blue-400"
               />
+
               <SocialLink
-                href="https://instagram.com"
-                icon={<Instagram size={24} />}
-                hoverColor="text-pink-500"
-              />
-              <SocialLink
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/sanjay-s-8483aa170/"
                 icon={<Linkedin size={24} />}
                 hoverColor="text-blue-700"
               />

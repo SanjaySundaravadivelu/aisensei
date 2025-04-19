@@ -6,6 +6,9 @@ import ProtectRoutes from "@/layouts/protected-routes";
 import { MainLayout } from "@/layouts/main-layout";
 
 import HomePage from "@/routes/home";
+import Pricing from "./routes/Pricing";
+import Maintenance from "./routes/Maintenance";
+import JobSearch from "./routes/JobSearch";
 import { SignInPage } from "./routes/sign-in";
 import { SignUpPage } from "./routes/sign-up";
 import { Generate } from "./components/generate";
@@ -22,6 +25,9 @@ const App = () => {
         {/* public routes */}
         <Route element={<PublicLayout />}>
           <Route index element={<HomePage />} />
+          <Route path="/resume/*" element={<Maintenance />} />
+          <Route path="/jobs/*" element={<JobSearch />} />
+          <Route path="/pricing/*" element={<Pricing />} />
         </Route>
 
         {/* authentication layout */}
