@@ -6,7 +6,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { db } from "@/config/firebase.config";
 import { Interview } from "@/types";
 import { useAuth, useUser } from "@clerk/clerk-react";
-import { LoaderPage } from "@/routes/loader-page";
 import { Loader } from "lucide-react";
 
 import {

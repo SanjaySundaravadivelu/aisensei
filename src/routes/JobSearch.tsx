@@ -42,17 +42,11 @@ interface JobInsights {
 
 const JobSearch: React.FC = () => {
   const [query, setQuery] = useState<string>("");
-  const [country, setCountry] = useState<string>("us");
-  const [language, setLanguage] = useState<string>("");
-  const [datePosted, setDatePosted] = useState<string>("all");
-  const [workFromHome, setWorkFromHome] = useState<boolean>(false);
-  const [employmentType, setEmploymentType] = useState<string>("");
-  const [experience, setExperience] = useState<string>("");
+
   const [jobs, setJobs] = useState<Job[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [insights, setInsights] = useState<JobInsights | null>(null);
-  const [loadingInsights, setLoadingInsights] = useState<boolean>(false);
-  const { isSignedIn, isLoaded } = useAuth();
+  const { isSignedIn } = useAuth();
   const { user } = useUser();
 
   const subOne = async (userId: string) => {
@@ -90,12 +84,6 @@ const JobSearch: React.FC = () => {
         url: "https://jsearch.p.rapidapi.com/search",
         params: {
           query,
-          country,
-          language,
-          date_posted: datePosted,
-          work_from_home: workFromHome.toString(),
-          employment_types: employmentType,
-          job_requirements: experience,
           page: "1",
           num_pages: "1",
         },
@@ -123,7 +111,6 @@ const JobSearch: React.FC = () => {
 
   const fetchJobInsights = async () => {
     if (!query) return;
-    setLoadingInsights(true);
     const prompt = `Provide top 5 insights for the job role: "${query}". Include:
       - Key skills required only top 5
       - Career roadmap as a structured JSON in this format {level1:string,descrption1:string,level2:string,description2:string} in same level tree only three levels
@@ -139,7 +126,6 @@ const JobSearch: React.FC = () => {
     } catch (error) {
       setInsights(null);
     }
-    setLoadingInsights(false);
   };
 
   const RoadmapTree: React.FC<{ roadmap: any }> = ({ roadmap }) => {

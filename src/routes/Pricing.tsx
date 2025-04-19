@@ -6,7 +6,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
 const Pricing = () => {
-  const { isSignedIn, isLoaded } = useAuth();
+  const { isSignedIn } = useAuth();
   const { user } = useUser();
   const [loading, setLoading] = useState(true);
 

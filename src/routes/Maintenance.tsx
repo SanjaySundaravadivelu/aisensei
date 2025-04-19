@@ -1,5 +1,3 @@
-import React from "react";
-
 const Maintenance = () => {
   return (
     <div className="bg-gray-200 font-sans leading-normal tracking-normal">

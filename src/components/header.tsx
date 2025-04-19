@@ -3,7 +3,6 @@ import { useAuth } from "@clerk/clerk-react";
 import { Container } from "./container";
 import { LogoContainer } from "./logo-container";
 import { NavigationRoutes } from "./navigation-routes";
-import { NavLink } from "react-router-dom";
 import { ProfileContainer } from "./profile-container";
 import { ToggleContainer } from "./toggle-container";
 
