@@ -111,7 +111,7 @@ export const Feedback = () => {
         <CustomBreadCrumb
           breadCrumbPage={"Feedback"}
           breadCrumpItems={[
-            { label: "Mock Interviews", link: "/generate" },
+            { label: "Mock Interviews", link: "/aisensei/generate" },
             {
               label: `${interview?.position}`,
               link: `/generate/interview/${interview?.id}`,

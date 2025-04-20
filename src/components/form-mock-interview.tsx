@@ -228,7 +228,9 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
     <div className="w-full flex-col space-y-4">
       <CustomBreadCrumb
         breadCrumbPage={breadCrumpPage}
-        breadCrumpItems={[{ label: "Mock Interviews", link: "/generate" }]}
+        breadCrumpItems={[
+          { label: "Mock Interviews", link: "/aisensei/generate" },
+        ]}
       />
 
       <div className="mt-4 flex items-center justify-between w-full">

@@ -60,10 +60,12 @@ export const MockLoadPage = () => {
       <div className="flex items-center justify-between w-full gap-2">
         <CustomBreadCrumb
           breadCrumbPage={interview?.position || ""}
-          breadCrumpItems={[{ label: "Mock Interviews", link: "/generate" }]}
+          breadCrumpItems={[
+            { label: "Mock Interviews", link: "/aisensei/generate" },
+          ]}
         />
 
-        <Link to={`/generate/interview/${interviewId}/start`}>
+        <Link to={`/aisensei/generate/interview/${interviewId}/start`}>
           <Button size={"sm"}>
             Start <Sparkles />
           </Button>

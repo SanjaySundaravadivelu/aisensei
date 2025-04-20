@@ -59,10 +59,10 @@ export const MockInterviewPage = () => {
       <CustomBreadCrumb
         breadCrumbPage="Start"
         breadCrumpItems={[
-          { label: "Mock Interviews", link: "/generate" },
+          { label: "Mock Interviews", link: "/aisensei/generate" },
           {
             label: interview?.position || "",
-            link: `/generate/interview/${interview?.id}`,
+            link: `/aisensei/generate/interview/${interview?.id}`,
           },
         ]}
       />
