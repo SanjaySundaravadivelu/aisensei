@@ -83,7 +83,7 @@ export const ProfileContainer = () => {
             <UserButton.Link
               label={"Current Plan : " + userData?.subrcription + " -- 🚀"}
               labelIcon={<DotIcon />}
-              href="/pricing"
+              href="/aisensei/pricing"
             />
           </UserButton.MenuItems>
         </UserButton>
