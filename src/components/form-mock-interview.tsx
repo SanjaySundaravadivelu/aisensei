@@ -268,7 +268,6 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
                 <FormControl>
                   <Input
                     className="h-12"
-                    disabled={loading}
                     placeholder="eg:- Full Stack Developer"
                     {...field}
                     value={field.value || ""}
@@ -290,7 +289,6 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
                 <FormControl>
                   <Textarea
                     className="h-12"
-                    disabled={loading}
                     placeholder="eg:- describle your job role"
                     {...field}
                     value={field.value || ""}
@@ -335,7 +333,6 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
                 <FormControl>
                   <Textarea
                     className="h-12"
-                    disabled={loading}
                     placeholder="eg:- React, Typescript..."
                     {...field}
                     value={field.value || ""}
@@ -357,7 +354,7 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
             <Button
               type="submit"
               size={"sm"}
-              disabled={isSubmitting || !isValid || loading}
+              disabled={isSubmitting || !isValid}
             >
               {loading ? (
                 <Loader className="text-gray-50 animate-spin" />

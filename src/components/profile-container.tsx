@@ -78,7 +78,7 @@ export const ProfileContainer = () => {
   return (
     <div className="flex items-center gap-6">
       {isSignedIn && !loading ? (
-        <UserButton afterSignOutUrl="/">
+        <UserButton afterSignOutUrl="/aisensei/">
           <UserButton.MenuItems>
             <UserButton.Link
               label={"Current Plan : " + userData?.subrcription + " -- 🚀"}
