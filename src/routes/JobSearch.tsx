@@ -523,7 +523,7 @@ const JobSearch: React.FC = () => {
                     <img
                       className="lg:w-[280px] w-[200px] border-8 border-white dark:border-slate-900 rounded-xl"
                       alt=""
-                      src="assets/img/office.jpg"
+                      src={`${import.meta.env.BASE_URL}assets/img/office.jpg`}
                     />
                     <div className="absolute flex justify-between items-center -top-6 md:-start-10 start-2 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 w-max">
                       <svg

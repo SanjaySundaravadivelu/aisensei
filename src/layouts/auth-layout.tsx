@@ -4,7 +4,7 @@ const AuthenticationLayout = () => {
   return (
     <div className="w-screen h-screen overflow-hidden flex items-center justify-center relative">
       <img
-        src={`${process.env.PUBLIC_URL}/assets/img/bg.png`}
+        src={`${import.meta.env.BASE_URL}/assets/img/bg.png`}
         className="absolute w-full h-full object-cover opacity-20"
         alt=""
       />
