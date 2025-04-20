@@ -20,7 +20,7 @@ import { Feedback } from "./routes/feedback";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/aisensei">
       <Routes>
         {/* public routes */}
         <Route element={<PublicLayout />}>
