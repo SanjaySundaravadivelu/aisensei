@@ -33,7 +33,12 @@ const Header = () => {
             <ProfileContainer />
 
             {/* mobile toggle section */}
-            <ToggleContainer />
+            {userId && (
+              <>
+                {" "}
+                <ToggleContainer />
+              </>
+            )}
           </div>
         </div>
       </Container>
