@@ -181,7 +181,7 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
         }
       }
 
-      navigate("/generate", { replace: true });
+      navigate("/aisensei//generate", { replace: true });
     } catch (error) {
       console.log(error);
       toast.error("Error..", {
@@ -203,7 +203,7 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
       await deleteDoc(docRef);
 
       toast.success("Interview deleted successfully.");
-      navigate("/generate", { replace: true });
+      navigate("/aisensei/generate", { replace: true });
     } catch (error) {
       console.log(error);
       toast.error("Error..", {
