@@ -7547,9 +7547,7 @@ const HomePage = () => {
                   data-nimg="1"
                   className="relative"
                   style={{ color: "transparent" }}
-                  src={`${
-                    import.meta.env.BASE_URL
-                  }/assets/img/logo/microsoft.png`}
+                  src={`/assets/img/logo/microsoft.png`}
                 />
               </div>
             </div>
@@ -7568,9 +7566,7 @@ const HomePage = () => {
                       data-nimg="1"
                       className="relative"
                       style={{ color: "transparent" }}
-                      src={`${
-                        import.meta.env.BASE_URL
-                      }/assets/img/logo/react.png`}
+                      src={`/assets/img/logo/react.png`}
                     />
                   </div>
                 </div>
@@ -7587,9 +7583,7 @@ const HomePage = () => {
                       data-nimg="1"
                       className="relative"
                       style={{ color: "transparent" }}
-                      src={`${
-                        import.meta.env.BASE_URL
-                      }/assets/img/logo/firebase.png`}
+                      src={`/assets/img/logo/firebase.png`}
                     />
                   </div>
                 </div>
@@ -7606,9 +7600,7 @@ const HomePage = () => {
                       data-nimg="1"
                       className="relative"
                       style={{ color: "transparent" }}
-                      src={`${
-                        import.meta.env.BASE_URL
-                      }/assets/img/logo/meet.png`}
+                      src={`/assets/img/logo/meet.png`}
                     />
                   </div>
                 </div>
@@ -7625,9 +7617,7 @@ const HomePage = () => {
                       data-nimg="1"
                       className="relative"
                       style={{ color: "transparent" }}
-                      src={`${
-                        import.meta.env.BASE_URL
-                      }/assets/img/logo/tailwindcss.png`}
+                      src={`/assets/img/logo/tailwindcss.png`}
                     />
                   </div>
                 </div>
@@ -7644,9 +7634,7 @@ const HomePage = () => {
                       data-nimg="1"
                       className="relative"
                       style={{ color: "transparent" }}
-                      src={`${
-                        import.meta.env.BASE_URL
-                      }/assets/img/logo/zoom.png`}
+                      src={`/assets/img/logo/zoom.png`}
                     />
                   </div>
                 </div>
@@ -7663,9 +7651,7 @@ const HomePage = () => {
                       data-nimg="1"
                       className="relative"
                       style={{ color: "transparent" }}
-                      src={`${
-                        import.meta.env.BASE_URL
-                      }/assets/img/logo/microsoft.png`}
+                      src={`/assets/img/logo/microsoft.png`}
                     />
                   </div>
                 </div>
@@ -7682,9 +7668,7 @@ const HomePage = () => {
                       data-nimg="1"
                       className="relative"
                       style={{ color: "transparent" }}
-                      src={`${
-                        import.meta.env.BASE_URL
-                      }/assets/img/logo/meet.png`}
+                      src={`/assets/img/logo/meet.png`}
                     />
                   </div>
                 </div>
@@ -7701,9 +7685,7 @@ const HomePage = () => {
                       data-nimg="1"
                       className="relative"
                       style={{ color: "transparent" }}
-                      src={`${
-                        import.meta.env.BASE_URL
-                      }/assets/img/logo/zoom.png`}
+                      src={`/assets/img/logo/zoom.png`}
                     />
                   </div>
                 </div>
