@@ -23,7 +23,7 @@ export const CustomBreadCrumb = ({
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink
-            href="/aisensei/"
+            href="/"
             className="flex items-center justify-center hover:text-emerald-500"
           >
             <Home className="w-3 h-3 mr-2" />

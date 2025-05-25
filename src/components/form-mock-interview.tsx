@@ -181,7 +181,7 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
         }
       }
 
-      navigate("/aisensei//generate", { replace: true });
+      navigate("/generate", { replace: true });
     } catch (error) {
       console.log(error);
       toast.error("Error..", {
@@ -203,7 +203,7 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
       await deleteDoc(docRef);
 
       toast.success("Interview deleted successfully.");
-      navigate("/aisensei/generate", { replace: true });
+      navigate("/generate", { replace: true });
     } catch (error) {
       console.log(error);
       toast.error("Error..", {
@@ -228,9 +228,7 @@ export const FormMockInterview = ({ initialData }: FormMockInterviewProps) => {
     <div className="w-full flex-col space-y-4">
       <CustomBreadCrumb
         breadCrumbPage={breadCrumpPage}
-        breadCrumpItems={[
-          { label: "Mock Interviews", link: "/aisensei/generate" },
-        ]}
+        breadCrumpItems={[{ label: "Mock Interviews", link: "/generate" }]}
       />
 
       <div className="mt-4 flex items-center justify-between w-full">

@@ -78,12 +78,12 @@ export const ProfileContainer = () => {
   return (
     <div className="flex items-center gap-6">
       {isSignedIn && !loading ? (
-        <UserButton afterSignOutUrl="/aisensei/">
+        <UserButton afterSignOutUrl="/">
           <UserButton.MenuItems>
             <UserButton.Link
               label={"Current Plan : " + userData?.subrcription + " -- 🚀"}
               labelIcon={<DotIcon />}
-              href="/aisensei/pricing"
+              href="/pricing"
             />
           </UserButton.MenuItems>
         </UserButton>
